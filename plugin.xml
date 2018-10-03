@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="http-client" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>
+		HttpClient
+	</name>
+	<engines>
+    	<engine name="cordova" version=">=7.1.0"/>
+    	<engine name="cordova-android" version=">=6.3.0"/>
+  	</engines>
+	<js-module name="HttpClient" src="www/HttpClient.js">
+		<clobbers target="HttpClient" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="HttpClient">
+				<param name="android-package" value="http.client.HttpClient" />
+			</feature>
+		</config-file>
+        <framework src="src/android/http-client-plugin.gradle" custom="true" type="gradleReference"/>
+        <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
+        <!--<lib-file src="src/android/com.android.volley:volley:1.1.1.aar"/> -->
+        <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+"/> 
+		<config-file parent="/*" target="AndroidManifest.xml">
+		</config-file>
+		<source-file src="src/android/HttpClient.java" target-dir="src/http/client/HttpClient" />
+	</platform>
+</plugin>

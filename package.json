@@ -1,0 +1,22 @@
+{
+  "name": "http-client",
+  "version": "0.0.1",
+  "description": "This plugin is used to make http calls",
+  "cordova": {
+    "id": "http-client",
+    "platforms": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mangaarun/HttpClient.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Arun Manga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mangaarun/HttpClient/issues"
+  },
+  "homepage": "https://github.com/mangaarun/HttpClient#readme"
+}
